@@ -1,0 +1,8 @@
+.npmrc
+node_modules/
+logs/
+yarn-error.log
+.eslintcache
+
+#JetBrains IDE
+.idea/

@@ -1,0 +1,11 @@
+dist/
+node_modules/
+logs/
+yarn-error.log
+.eslintcache
+.npmrc
+coverage/
+#JetBrains IDE
+.idea/
+
+.jest.config.default.js

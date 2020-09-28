@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.run": "onSave",
+  "standard.enable": false,
+  "editor.snippetSuggestions": "top",
+  // "activationEvents": ["workspaceContains:node_modules/.bin/jest"],
+  "jestrunner.jestCommand": "yarn test",
+  "[javascript]": {
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": false
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.suggest.insertMode": "replace"
+  }
+}

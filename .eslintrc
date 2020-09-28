@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:jest/recommended", "standard"],
+  "plugins": ["standard", "promise", "jest"],
+  "globals": {
+    "console": true,
+    "process": true
+  },
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "jest/globals": true
+  },
+  "rules": {
+    "no-console": "off",
+    "prefer-template": ["error"],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
+  }
+}
