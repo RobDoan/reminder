@@ -23,7 +23,7 @@ async function addReminder({ name, time }) {
 registerEvent('add', addReminder)
 
 function removeConnection(connection) {
-  remove(Connections, (connection) => connection === connection)
+  remove(Connections, (conn) => conn === connection)
 }
 
 function addConnection(ws) {
