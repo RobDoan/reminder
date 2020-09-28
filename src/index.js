@@ -22,14 +22,14 @@ async function addReminder({ name, time }) {
 
 registerEvent('add', addReminder)
 
-function addConnection(ws) {
-  const connection = new WebSocketConnection(ws)
-  Connections.push(connection)
+function removeConnection(connection) {
+  remove(Connections, (connection) => connection === connection)
 }
 
-function removeConnection(closeEvent) {
-  const { target } = closeEvent
-  remove(Connections, (connection) => connection.ws === target)
+function addConnection(ws) {
+  const connection = new WebSocketConnection(ws)
+  connection.on('close', removeConnection)
+  Connections.push(connection)
 }
 
 function notifyAllConnectingClient(reminder) {
@@ -40,7 +40,6 @@ function notifyAllConnectingClient(reminder) {
 
 const wss = new WebSocket.Server({ port: PORT })
 wss.on('connection', addConnection)
-wss.on('close', removeConnection)
 
 redisSubcriber.on('message', (_channel, message) => {
   const reminderIds = JSON.parse(message)
