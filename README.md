@@ -1,4 +1,3 @@
-# Turbulen Test
 
 ![Diagram](./Diagram.png 'Diagram')
 
@@ -10,7 +9,7 @@
   yarn scheduler # to start scheduler service
 ```
 
-### What I can improve if have more time
+### Need Improve
 
 - [ ] Clustering Redis or use to another type of persitent database. Because redis is not real presistent database, even it dumps data every specify of time, then reload it when server restarts. however it still may lost data.
 - [ ] Convert project to monorepo using nx or lerna
